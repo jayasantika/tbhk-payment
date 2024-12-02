@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background: #ffcc00;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background: #ff9900;
+}
+
+.payment-info {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.payment-info img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.payment-info p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    text-align: center;
+    color: #ccc;
+    margin: 20px 0;
+}
+
+.payment-info a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(0, 132, 255);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.payment-info a:hover {
+    background-color: #003366;
+    transform: scale(1.05);
+}
+.animated-gradient {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0);
+    animation: gradientAnimation 3s infinite linear;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+
+.hover-zoom img {
+    transition: transform 0.5s ease-in-out;
+}
+
+.hover-zoom img:hover {
+    transform: scale(1.1);
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+}
+
+.btn-animated:hover {
+    background-color: #ff8c00 !important;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
