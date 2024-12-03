@@ -19,7 +19,7 @@ html, body {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-#locale, #jam, #menit, #detik {
+.locale, .jam, .menit, .detik {
     font-size: 40px;
     color: #ffcc00;
     display: inline-block;
@@ -27,19 +27,19 @@ html, body {
     margin: 0 5px;
 }
 
-#detik {
+.detik {
     position: relative;
     width: 50px;
     text-align: center;
     overflow: hidden;
 }
 
-#detik span {
+.detik span {
     display: block;
     transition: transform 0.5s ease-out;
 }
 
-#sayings {
+.sayings {
     margin: 20px 0;
     font-size: 24px;
     font-weight: bold;
