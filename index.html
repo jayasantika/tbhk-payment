@@ -13,12 +13,12 @@
     <div>
         <img class="rounded-image" src="./media/mainlogo.jpeg" alt="Profile Picture">
         <h1 class="ml2">WELCOME TO WEBSITE TBHK</h1>
-        <div id="sayings">Ucapan</div>
+        <div class="sayings">Ucapan</div>
         <div class="time">
-            <span id="locale">Time</span><br>
-            <span id="jam">00</span> : 
-            <span id="menit">00</span> : 
-            <span id="detik"><span>00</span></span>
+            <span class="locale">Time</span><br>
+            <span class="jam">00</span> : 
+            <span class="menit">00</span> : 
+            <span class="detik"><span>00</span></span>
         </div>
         <div class="payment-info">
             <a href="./documentasion.html">
@@ -37,10 +37,10 @@
             const menit = String(waktu.getMinutes()).padStart(2, '0');
             const detik = String(waktu.getSeconds()).padStart(2, '0');
 
-            document.getElementById("jam").textContent = jam;
-            document.getElementById("menit").textContent = menit;
+            document.querySelector(".jam").textContent = jam;
+            document.querySelector(".menit").textContent = menit;
 
-            const detikElement = document.getElementById("detik").querySelector("span");
+            const detikElement = document.querySelector(".detik span");
             setTimeout(() => {
                 detikElement.textContent = detik;
             }, 500);
@@ -54,7 +54,7 @@
             else if (hours >= 11 && hours <= 14) ucapan = "Selamat Siang";
             else if (hours >= 13 && hours <= 15) ucapan = "Selamat Sore";
 
-            document.getElementById("sayings").innerHTML = ucapan;
+            document.querySelector(".sayings").innerHTML = ucapan;
         }
 
         setInterval(waktu, 1000);
