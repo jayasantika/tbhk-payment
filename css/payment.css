@@ -95,6 +95,7 @@ header .section-title {
 .nav-bar .search-bar {
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 
 .nav-bar .search-bar input {
@@ -140,26 +141,69 @@ header .section-title {
     transform: scale(1.1);
 }
 
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+.hidden-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    padding: 10px;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hidden-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hidden-menu a:hover {
+    background-color: #555;
+}
+
 @media (max-width: 768px) {
     .nav-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .nav-bar .links {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .nav-bar .search-bar {
-        width: 100%;
         justify-content: space-between;
     }
 
-    .nav-bar .next-page {
-        width: 100%;
-        text-align: right;
+    .nav-bar .links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .search-bar {
+        justify-content: center;
+    }
+
+    .hidden-menu {
+        display: none;
+    }
+
+    .hidden-menu.show {
+        display: flex;
     }
 }
 
@@ -203,21 +247,21 @@ main {
 }
 
 .payment-info .payment-box {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
     width: 200px;
     background-color: #fff;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
 }
 
 .payment-info img {
-    width: 50%;
-    margin-bottom: auto;
+    width: 80px;
+    margin-bottom: 10px;
     border-radius: 10%;
 }
 
